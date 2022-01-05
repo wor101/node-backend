@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "full_name": "Naveed Fida",
+    "email": "nf@example.com",
+    "phone_number": "12345678901",
+    "tags": "work,friend"
+  },
+  {
+    "id": 2,
+    "full_name": "Victor Reyes",
+    "email": "vpr@example.com",
+    "phone_number": "09876543210",
+    "tags": "work,friend"
+  },
+  {
+    "id": 3,
+    "full_name": "Pete Hanson",
+    "email": "ph@example.com",
+    "phone_number": "54321098761",
+    "tags": null
+  },
+  {
+    "full_name": "Rocky da Cat",
+    "phone_number": "Meow!",
+    "email": "smellycat@email.com",
+    "tags": null,
+    "id": 4
+  },
+  {
+    "full_name": "Rosie",
+    "phone_number": "asdfasdfsfdf",
+    "email": "rosie@email.com",
+    "tags": null,
+    "id": 5
+  },
+  {
+    "full_name": "Boston",
+    "phone_number": "aaaaaaaa",
+    "email": "prettyBoy@email.com",
+    "tags": null,
+    "id": 6
+  }
+]

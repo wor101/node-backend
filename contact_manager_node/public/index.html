@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Contact Manager</title>
+  <link rel="stylesheet" href="/stylesheets/whitespace-reset.css"/>
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="/javascripts/jquery.js"></script>
+  <script src="/javascripts/handlebars.js"></script>
+  <script src="/javascripts/app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Contact Manager</h1>
+    <p>Using Backbone.js, Localstorage, RequireJS, Handlebar and Bootstrap</p>
+  </header>
+  <main>
+    <div class="main_menu">
+      <button class="add_contact_button">Add Contact</button>
+      <input type="text" class="search" placeholder="search"/>
+    </div>
+    <div class="no_contacts">
+      <p>There are no contacts.</p>
+      <button class="add_contact_button">Add Contact</buttton>
+    </div>
+    <div class="create_contact">
+      <h3>Create Contact</h3>
+      <form class="create_contact_form">
+        <div>
+          <label for="full_name">Full name:</label>
+          <input type="text" id="full_name" name="full_name" class="create_contact_text_field"/>
+        </div>
+        <div>
+          <label for="email">Email address:</label>
+          <input type="text" id="email" name="email" class="create_contact_text_field"/>
+        </div>
+        <div>
+          <label for="phone_number">Telephone number:</label>
+          <input type="tel" id="phone_number" name="phone_number" class="create_contact_text_field"/>
+        </div>
+        <div class="button_line">
+          <input id="submit_contact" class="create_buttons" type="submit" value="Submit"/>
+          <button class="create_buttons">Cancel</button>
+        </div>
+      </form>
+    </div>  
+    <div class="contacts_list_div">
+      <ul>
+      </ul>
+    </div>
+    <div class="edit_contact">
+      <h3>Create Contact</h3>
+      <form class="edit_contact_form">
+        <div>
+          <label for="full_name">Full name:</label>
+          <input type="text" id="full_name" name="full_name" class="create_contact_text_field"/>
+        </div>
+        <div>
+          <label for="email">Email address:</label>
+          <input type="text" id="email" name="email" class="create_contact_text_field"/>
+        </div>
+        <div>
+          <label for="phone_number">Telephone number:</label>
+          <input type="tel" id="phone_number" name="phone_number" class="create_contact_text_field"/>
+        </div>
+        <div class="button_line">
+          <input id="submit_edited_contact" class="create_buttons" type="submit" value="Submit"/>
+          <button class="create_buttons">Cancel</button>
+        </div>
+      </form>
+    </div>  
+  </main>
+  <footer>
+    <p>Developed by <a href="http://www.devsaran.com/">Devsaran.com</a> and <a href="http://www.239listing.com/">239 Listing Real Estate.</a></p>
+  </footer>
+  <script id="contact_template" type="text/x-handlebars">
+    {{#each contacts}}
+      <li id={{id}}>
+        <h2>{{full_name}}</h2>
+        <h3>Phone Number:</h3>
+        <p>{{phone_number}}</p>
+        <h3>Email:</h3>
+        <p>{{email}}</p>
+        <a href="/api/contacts/{{id}}" class="edit_contact_button contact_links">Edit</a><a href="/api/contacts/{{id}}" class="delete_contact contact_links">Delete</a>
+      </li>
+    {{/each}}
+  </script>
+</body>
+</html>
